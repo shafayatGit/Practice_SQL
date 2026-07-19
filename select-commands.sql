@@ -65,4 +65,16 @@ select first_name as name, age as "User Age" from students;
 -- Sorting
 select first_name, blood_group, country, age from students order by age asc;
 
+-- Distinct
+select distinct country from students;
 
+-- Filtering
+select first_name, last_name, course, age from students
+where country='USA';
+
+-- AND, OR
+select * from students 
+where country='Nepal' or country='Bangladesh'
+
+select * from students
+where (grade='A' or grade='B') and (country='Nepal' or country='Bangladesh')
